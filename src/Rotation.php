@@ -128,7 +128,13 @@ function _endpage()
             return strlen($s);
     }
 
-
+    function RotatedText($x, $y, $txt, $angle)
+    {
+        //Text rotated around its origin
+        $this->Rotate($angle,$x,$y);
+        $this->Text($x,$y,$txt);
+        $this->Rotate(0);
+    }
 
 }
 ?>
